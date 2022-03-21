@@ -39,9 +39,10 @@ command : pipe is not working in windows system
 command : tail -f c:/windows/windowsupdate.log		//for looking windows log file
 command : find .	//for looking all files in MAC its not working for windows system
 command : ForFiles /s /d -2 /c "cmd /c del @file"	//for deleting file which is older than 2 days
+command : forfiles /s /m *.log /D -1 /C "cmd /c del @file"	//for deleting log file only which is older than 2 days
 command : sudo rm directoryName	//this will work only for MAC not for windows machine it will delete directory without asking any permission because sudo is for superuser.
 command : chmod	//its not working properly in windows system with the help of this you can change user permission in MAC system
-command :  $myvar = 7	//this is the way to declaring variable in powershell windows its working for windows system with $ symbol
+command : $myvar=7	//this is the way to declaring variable in powershell windows its working for windows system with $ symbol
 command : echo $myvar	//it will print myvar variable value
 command : echo $HOME	//it will show your current home user path
 command : echo $USER and echo $path		//it is not working in windows system
@@ -52,10 +53,61 @@ command : read -p "type your age: "	age	//it will not work for windows system it
 command : echo "hello world">fileName.extension	//the " > " symbol erase the content and then add the desired string
 command : if [ condition ]; then	//if statement and relational condition is written inside square brackets
 command : fi	//its for closing if so we need to write reverse of if
+command : seq 1 10	// it will print 1 to 10 number
+command : seq 1 2 10	//it will print odd number
+command : seq 0 2 10	//it will print even number
+
+syntax : seq start end "and" seq start increment end
+
+command : echo "Even Number : " $(seq 0 2 10)
 
 example : if [3 >= 2]; then   or if [3 -ge 3]; then
 			echo "number is greater than 2"
 		  fi
 		  
-command : cmd /k	//This is used for holding the console window just like a getch() function in c language
-command : 
+command : cmd /k	//This is used for holding the console window just like a getch() function in c language.
+
+switch statement syntax : case "condition" in
+							"condition_1") echo "" ;;
+							"condition_2") echo "" ;;
+							"condition_3") echo "" ;;
+							*) echo "this is for default statement" ;;
+						  esac
+						  
+example : read -p "Enter WeekDay : " day
+		  case "$day" in
+		  	"sunday") echo "it's a sunday!!"
+				;;
+			# ;; two semicolon is just like a break keyword
+			# for breaking the statement otherwise waterfall situation can be occur
+			"monday") echo "it's a monday!!" ;;
+			"tuesday") echo "it's a tuesday!!" ;;
+			"wednesday") echo "it's a wednesday!!" ;;
+			"thursday") echo "it's a thursday!!" ;;
+			"friday") echo "it's a friday!!" ;;
+			"saturday") echo "it's a saturday!!" ;;
+			*) echo "you entered something wrong!!@@" ;;
+		   esac
+		 
+for loop syntax : for var in condition
+				  do
+					echo $var
+				  done
+				  
+example : for (( i=1 ; i<=10 ; i++ ))
+		  do
+			echo $((n*i))
+		  done
+		 
+while loop syntax : while [ condition ]
+					do
+						statement
+					done
+		  a=2
+example : while [ $a -lt 10 ]
+		  do
+			echo "$a"
+			a=`expr $a - 1`
+		  done
+		  
+command : grep -ni "word_to_be_search_in_file" filename.extension	// this command is use for finding any thing on file

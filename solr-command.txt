@@ -1,0 +1,54 @@
+command : solr start -p portNumber (Ex: solr start -p 8984) then open in browser localhost:8984
+command : solr stop -p portNumber	//to stop the solr with portNumber
+command : solr restart -p portNumber	//to restart the solr with portNumber
+command : solr status -p portNumber		//to know the status of the solr with portNumber
+command : solr -help	//it will show you which command we can use in it
+
+command : solr create -c collectionName		//For creating collection(Table) in solr database
+
+command : Adding data using XML -->
+			<add> 
+				<doc> 
+					<field name = "id">1</field> 
+					<field name = "name">Rishu</field>
+					<field name = "address" update="add">Uttar Pradesh</field> 
+				</doc>
+			</add>
+
+command : Deleting data using XML -->
+			<delete>
+				<id>1</id>
+			</delete>
+			
+command : Update the data using XML	-->
+			<add>   
+				<doc>     
+					<field name = "id">3</field>     
+					<field name = "name" update = "set">Rishabh</field>
+					<field name = "address">kanpur</field>   
+				</doc> 
+			</add>
+			
+command : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+link : https://www.youtube.com/watch?v=X824jnMpSEI
+
+https://mvnrepository.com/artifact/org.apache.solr/solr-solrj/8.11
