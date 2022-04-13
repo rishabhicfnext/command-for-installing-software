@@ -15,3 +15,6 @@ mvn -B archetype:generate -D archetypeGroupId=com.adobe.aem -D aemVersion=cloud 
 
 < ----- vikas artifact id ------ >
 mvn -B archetype:generate -D archetypeGroupId=com.adobe.aem -D aemVersion=6.5.8 -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=30 -D appTitle="WKND Sites Project" -D appId="wknd" -D groupId="com.adobe.aem.guides.wknd" -D artifactId="aem-guides-wknd"
+
+< ----- Rishabh Latest artifact id ------ >
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=35 -D appTitle="SOLR with AEM Project" -D appId="solr" -D groupId="com.adobe.aem.solr" -D artifactId="aem-solr" -D package="com.adobe.aem.solr" -D version="0.0.1-SNAPSHOT" -D aemVersion="cloud"

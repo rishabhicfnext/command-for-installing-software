@@ -20,6 +20,12 @@ command : Deleting data using XML -->
 				<id>1</id>
 			</delete>
 			
+				// or
+				
+			<delete>
+				<query>id:1</query>
+			</delete>
+			
 command : Update the data using XML	-->
 			<add>   
 				<doc>     
