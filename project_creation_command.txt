@@ -18,3 +18,6 @@ mvn -B archetype:generate -D archetypeGroupId=com.adobe.aem -D aemVersion=6.5.8 
 
 < ----- Rishabh Latest artifact id ------ >
 mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=35 -D appTitle="SOLR with AEM Project" -D appId="solr" -D groupId="com.adobe.aem.solr" -D artifactId="aem-solr" -D package="com.adobe.aem.solr" -D version="0.0.1-SNAPSHOT" -D aemVersion="cloud"
+
+< ----- Rishabh artifact id for AEM version 6.2 ------ >
+mvn archetype:generate -DarchetypeGroupId=com.day.jcr.vault -DarchetypeArtifactId=multimodule-content-package-archetype -DarchetypeVersion=1.0.2 -DarchetypeRepository=adobe-public-releases -DarchetypeVersion=1.0.2 -DgroupId=com.adobe.aem.solr -DartifactId=aem-solr -Dversion=1.0-SNAPSHOT -Dpackage=com.adobe.aem.solr -DappsFolderName=myprojectsolr -DartifactName="My Project Solr" -DcqVersion="6.2.0"  -DpackageGroup="SOLR"
