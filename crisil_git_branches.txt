@@ -1,0 +1,7 @@
+my branch name is : feature/indices_automation_solrServices_QA
+
+my test branch is : test_release/UAT
+
+address UAT branch : release/UAT_main
+
+address QA branch : release/QA_main
